@@ -1,0 +1,111 @@
+0:00:08 Tab2 StartNav13 #typed
+0:00:08 Tab2 FinishNav13 ERR_ABORTED
+0:00:08 Tab2 StartNav14 #typed
+0:00:08 Tab2 FinishNav14
+0:00:08 Tab2 PageLoad
+0:00:09 Tab2 StartNav15 #typed
+0:00:09 Tab2 FinishNav15 ERR_ABORTED
+0:00:09 Tab2 StartNav16 #typed
+0:00:09 Tab2 FinishNav16
+0:00:09 Tab2 PageLoad
+0:00:11 Tab2 StartNav17 #typed
+0:00:11 Tab2 FinishNav17 ERR_ABORTED
+0:00:11 Tab2 StartNav18 #typed
+0:00:11 Tab2 FinishNav18
+0:00:11 Tab2 PageLoad
+0:00:11 Tab2 StartNav19 #typed
+0:00:11 Tab2 FinishNav19 ERR_ABORTED
+0:00:11 Tab2 StartNav20 #typed
+0:00:11 Tab2 FinishNav20
+0:00:11 Tab2 PageLoad
+0:00:14 Tab2 StartNav21 #typed
+0:00:14 Tab2 FinishNav21 ERR_ABORTED
+0:00:14 Tab2 StartNav22 #typed
+0:00:14 Tab2 FinishNav22
+0:00:14 Tab2 PageLoad
+0:00:17 Tab2 StartNav23 #typed
+0:00:17 Tab2 FinishNav23 ERR_ABORTED
+0:00:17 Tab2 StartNav24 #typed
+0:00:17 Tab2 FinishNav24
+0:00:17 Tab2 PageLoad
+0:00:22 Tab2 StartNav25 #typed
+0:00:22 Tab2 FinishNav25
+0:00:22 Tab2 PageLoad
+0:00:35 Tab2 StartNav26 #typed
+0:00:35 Tab2 FinishNav26 ERR_ABORTED
+0:00:35 Tab2 StartNav27 #typed
+0:00:35 Tab2 FinishNav27
+0:00:35 Tab2 PageLoad
+0:16:31 Tab2 StartNav28 #typed
+0:16:31 Tab2 FinishNav28
+0:16:31 Tab2 PageLoad
+0:17:32 Tab2 StartNav29 #typed
+0:17:32 Tab2 FinishNav29
+0:17:32 Tab2 PageLoad
+0:19:16 Tab2 StartNav30 #typed
+0:19:16 Tab2 FinishNav30
+0:19:16 Tab2 PageLoad
+0:19:17 Tab2 StartNav31 #typed
+0:19:17 Tab2 FinishNav31 ERR_ABORTED
+0:19:17 Tab2 StartNav32 #typed
+0:19:17 Tab2 FinishNav32
+0:19:17 Tab2 PageLoad
+0:19:23 Tab2 StartNav33 #typed
+0:19:23 Tab2 FinishNav33
+0:19:23 Tab2 PageLoad
+0:19:49 Tab2 StartNav34 #typed
+0:19:49 Tab2 FinishNav34
+0:19:49 Tab2 PageLoad
+0:23:48 Tab2 StartNav35 #typed
+0:23:48 Tab2 FinishNav35 ERR_ABORTED
+0:23:48 Tab2 StartNav36 #typed
+0:23:48 Tab2 FinishNav36
+0:23:48 Tab2 PageLoad
+0:23:50 Tab2 StartNav37 #typed
+0:23:50 Tab2 FinishNav37 ERR_ABORTED
+0:23:50 Tab2 StartNav38 #typed
+0:23:50 Tab2 FinishNav38
+0:23:50 Tab2 PageLoad
+0:23:53 Tab2 StartNav39 #typed
+0:23:53 Tab2 FinishNav39
+0:23:53 Tab2 PageLoad
+0:27:31 Tab2 StartNav40 #typed
+0:27:31 Tab2 FinishNav40
+0:27:31 Tab2 PageLoad
+0:33:33 Tab2 StartNav41 #typed
+0:33:33 Tab2 FinishNav41
+0:33:33 Tab2 PageLoad
+0:33:52 Microsoft.NewBrowser_Popup
+0:33:53 Microsoft.BrowserList.AddBrowser
+0:33:53 Browser3 Insert active Tab3 at 0
+0:33:53 Tab3 StartNav42 #auto_toplevel
+0:33:53 Tab3 StartNav43 #typed
+0:33:53 Tab3 FinishNav42
+0:33:53 Tab3 PageLoad
+0:33:53 Tab3 FinishNav43
+0:33:53 Tab3 PageLoad
+0:33:53 Tab3 StartNav44 #typed
+0:33:53 Tab3 FinishNav44
+0:33:53 Tab3 PageLoad
+0:33:55 Tab3 StartNav45 #typed
+0:33:55 Tab3 FinishNav45
+0:33:55 Tab3 PageLoad
+0:33:59 Tab3 StartNav46 #typed
+0:33:59 Tab3 FinishNav46
+0:33:59 Tab3 PageLoad
+0:33:59 Tab3 StartNav47 #typed
+0:33:59 Tab3 FinishNav47
+0:33:59 Tab3 PageLoad
+0:39:06 Tab3 StartNav48 #typed
+0:39:06 Tab3 FinishNav48
+0:39:06 Tab3 PageLoad
+0:39:07 Tab3 StartNav49 #typed
+0:39:07 Tab3 FinishNav49
+0:39:07 Tab3 PageLoad
+0:47:18 Tab3 StartNav50 #typed
+0:47:18 Tab3 FinishNav50
+0:47:18 Tab3 PageLoad
+0:47:49 Tab3 StartNav51 #typed
+0:47:49 Tab3 FinishNav51
+0:47:49 Tab3 PageLoad
+0:47:51 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp

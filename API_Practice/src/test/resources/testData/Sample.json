@@ -1,0 +1,16 @@
+[
+	{
+		"emp": {
+			"Company": "infy",
+			"Email": "qa@gmail.com",
+			"Name": "QA"
+		}
+	},
+	{
+		"emp": {
+			"Company": "IBM",
+			"Email": "tester@gmail.com",
+			"Name": "Tester"
+		}
+	}
+]
