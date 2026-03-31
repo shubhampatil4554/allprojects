@@ -86,10 +86,10 @@ public class GoogleTestReport2 extends SeleniumUtil{
 	
 	public static String screenShot(WebDriver driver)  {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File Dest = new File(".\\src\\test\\resources\\Screenshots" + System.currentTimeMillis()+ ".png");
-		String errflpath = Dest.getAbsolutePath();
+		File dest = new File(".\\src\\test\\resources\\Screenshots" + System.currentTimeMillis()+ ".png");
+		String errflpath = dest.getAbsolutePath();
 		try {
-			FileUtils.copyFile(scrFile, Dest);
+			FileUtils.copyFile(scrFile, dest);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -16,8 +16,11 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -46,10 +49,16 @@ public class SeleniumUtility {
 			e.printStackTrace();
 		}
 		if (browserName.equalsIgnoreCase("chrome")) {
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--disable-notifications");
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("firefox")) {
+			FirefoxOptions options=new FirefoxOptions();
+			options.addArguments("--disable-notifications");
 			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("edge")) {
+			EdgeOptions options=new EdgeOptions();
+			options.addArguments("--disable-notifications");
 			driver = new EdgeDriver();
 		}
 		driver.manage().window().maximize();
