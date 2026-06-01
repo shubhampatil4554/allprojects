@@ -16,10 +16,10 @@ public class ConversionProgram {
 		ref.put("company", "infy");
 		
 		System.out.println("+++++++++++++++++++++++++s");
-		System.out.println("JSONObject entries : "+ref);
-		System.out.println("Get Values : "+ref.values());
-		System.out.println("Get keys : "+ ref.keySet());
-		System.out.println("Get value : "+ ref.get("email"));
+		System.out.println("JSONObject entries : "+ref);// {"name":"QA","company":"infy","email":"abc@gmail.com"}
+		System.out.println("Get Values : "+ref.values());//[QA, infy, abc@gmail.com]
+		System.out.println("Get keys : "+ ref.keySet());//[name, company, email]
+		System.out.println("Get value : "+ ref.get("email"));//abc@gmail.com
 		System.out.println("+++++++++++++++++++++++++s");
 	}
 	
@@ -35,15 +35,15 @@ public class ConversionProgram {
 		ref.put("courses", courses);
 		
 		System.out.println("++++++++++++++++++++++++");
-		System.out.println("Map Entries : "+ref);
-		System.out.println("Get Values : "+ref.values());
-		System.out.println("Get keys : "+ ref.keySet());
-		System.out.println("Get value : "+ ref.get("company"));
+		System.out.println("Map Entries : "+ref);//{courses=[Ljava.lang.String;@2a7f1f10, name=QA, company=cogni, email=qa@gmail.com}
+		System.out.println("Get Values : "+ref.values());//[[Ljava.lang.String;@2a7f1f10, QA, cogni, qa@gmail.com]
+		System.out.println("Get keys : "+ ref.keySet());//[courses, name, company, email]
+		System.out.println("Get value : "+ ref.get("company"));//cogni
 		
 		//convert Map To JSONString
 		String jsonString=JSONValue.toJSONString(ref);
 		System.out.println("After converting to json String : "+jsonString);
-		
+		//{"courses":[Ljava.lang.String;@2a7f1f10,"name":"QA","company":"cogni","email":"qa@gmail.com"}
 		System.out.println("+++++++++++++++++++++++++");
 		
 	}

@@ -15,14 +15,22 @@ public class ParsingJsonResponseData {
 	// Approach 1
 	@Test(priority = 1)
 	void testJsonResponseData() {
-		given().when().get("https://jsonplaceholder.typicode.com/posts").then().statusCode(200)
-				.header("Content-Type", "application/json; charset=utf-8").body("[1].title", equalTo("qui est esse"));
+		given()
+		.when()
+		   .get("https://jsonplaceholder.typicode.com/posts")
+		.then()
+		   .statusCode(200)	
+		   .header("Content-Type", "application/json; charset=utf-8")
+		   .body("[1].title", equalTo("qui est esse"));
 	}
 
 	// Approach 2
 	@Test(priority = 2)
 	void testJsonResponseData1() {
-		Response res = given().contentType(ContentType.JSON).when().get("https://jsonplaceholder.typicode.com/posts");
+		Response res = given()
+				.contentType(ContentType.JSON)
+				.when()
+				.get("https://jsonplaceholder.typicode.com/posts");
 		Assert.assertEquals(res.getStatusCode(), 200);
 		Assert.assertEquals(res.header("Content-Type"), "application/json; charset=utf-8");
 

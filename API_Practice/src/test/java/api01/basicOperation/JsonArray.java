@@ -13,7 +13,7 @@ public class JsonArray {
 		ja.add("Orange");
 		ja.add("Grapes");
 		ja.add("Mango");
-		System.out.println("JSONArray Elements are "+ja);
+		System.out.println("JSONArray Elements are "+ja);//["Apple","Orange","Grapes","Mango"]
 	}
 	@Test
 	public void sampleJsonArray2() {
@@ -21,26 +21,27 @@ public class JsonArray {
 		ref1.put("Name", "QA");
 		ref1.put("Email", "qa@gmail.com");
 		ref1.put("Company", "infy");
-		System.out.println("JSONObject Elements of ref1 are "+ref1);
+		System.out.println("JSONObject Elements of ref1 are "+ref1);//{"Company":"infy","Email":"qa@gmail.com","Name":"QA"}
 		
 		JSONObject ref2=new JSONObject();
 		ref2.put("Name", "Tester");
 		ref2.put("Email", "tester@gmail.com");
 		ref2.put("Company", "IBM");
-		System.out.println("JSONObject Elements of ref2 are "+ref2);
+		System.out.println("JSONObject Elements of ref2 are "+ref2);//{"Company":"IBM","Email":"tester@gmail.com","Name":"Tester"}
 		
 		
 		JSONObject ref3=new JSONObject();
 		ref3.put("emp", ref1);
-		System.out.println("JSONObject Elements of ref3 are "+ref3);
+		System.out.println("JSONObject Elements of ref3 are "+ref3);//{"emp":{"Company":"infy","Email":"qa@gmail.com","Name":"QA"}}
 		
 		JSONObject ref4=new JSONObject();
 		ref4.put("emp", ref2);
-		System.out.println("JSONObject Elements of ref4 are "+ref4);
+		System.out.println("JSONObject Elements of ref4 are "+ref4);//{"emp":{"Company":"IBM","Email":"tester@gmail.com","Name":"Tester"}}
 		
 		JSONArray jsa=new JSONArray();
 		jsa.add(ref3);
 		jsa.add(ref4);
-		System.out.println(jsa);
+		System.out.println("Print json array"+jsa);
+		//[{"emp":{"Company":"infy","Email":"qa@gmail.com","Name":"QA"}},{"emp":{"Company":"IBM","Email":"tester@gmail.com","Name":"Tester"}}]
 	}
 }

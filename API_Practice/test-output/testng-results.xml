@@ -1,63 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-17T18:55:03 IST" name="Suite" finished-at="2026-02-17T18:55:11 IST" duration-ms="7965">
+  <suite started-at="2026-04-17T11:20:36 IST" name="Default suite" finished-at="2026-04-17T11:20:36 IST" duration-ms="134">
     <groups>
     </groups>
-    <test started-at="2026-02-17T18:55:03 IST" name="Test" finished-at="2026-02-17T18:55:11 IST" duration-ms="7965">
-      <class name="api17.chaining.UpdateUser">
-        <test-method signature="test_UpdateUser(org.testng.ITestContext)[pri:0, instance:api17.chaining.UpdateUser@2177849e]" started-at="2026-02-17T18:55:09 IST" name="test_UpdateUser" finished-at="2026-02-17T18:55:10 IST" duration-ms="914" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@52719fb6]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2026-04-17T11:20:36 IST" name="Default test" finished-at="2026-04-17T11:20:36 IST" duration-ms="134">
+      <class name="api01.basicOperation.JsonArray">
+        <test-method signature="sampleJsonArray()[pri:0, instance:api01.basicOperation.JsonArray@4ef37659]" started-at="2026-04-17T11:20:36 IST" name="sampleJsonArray" finished-at="2026-04-17T11:20:36 IST" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_UpdateUser -->
-      </class> <!-- api17.chaining.UpdateUser -->
-      <class name="api17.chaining.DeleteUser">
-        <test-method signature="test_DeleteUser(org.testng.ITestContext)[pri:0, instance:api17.chaining.DeleteUser@40cb8df7]" started-at="2026-02-17T18:55:10 IST" name="test_DeleteUser" finished-at="2026-02-17T18:55:11 IST" duration-ms="914" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@52719fb6]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- sampleJsonArray -->
+        <test-method signature="sampleJsonArray2()[pri:0, instance:api01.basicOperation.JsonArray@4ef37659]" started-at="2026-04-17T11:20:36 IST" name="sampleJsonArray2" finished-at="2026-04-17T11:20:36 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_DeleteUser -->
-      </class> <!-- api17.chaining.DeleteUser -->
-      <class name="api17.chaining.GetUser">
-        <test-method signature="test_GetUser(org.testng.ITestContext)[pri:0, instance:api17.chaining.GetUser@3541cb24]" started-at="2026-02-17T18:55:08 IST" name="test_GetUser" finished-at="2026-02-17T18:55:09 IST" duration-ms="1108" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@52719fb6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_GetUser -->
-      </class> <!-- api17.chaining.GetUser -->
-      <class name="api17.chaining.CreateUser">
-        <test-method signature="test_CreateUser(org.testng.ITestContext)[pri:0, instance:api17.chaining.CreateUser@4ef37659]" started-at="2026-02-17T18:55:03 IST" name="test_CreateUser" finished-at="2026-02-17T18:55:08 IST" duration-ms="4938" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@52719fb6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_CreateUser -->
-      </class> <!-- api17.chaining.CreateUser -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- sampleJsonArray2 -->
+      </class> <!-- api01.basicOperation.JsonArray -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
