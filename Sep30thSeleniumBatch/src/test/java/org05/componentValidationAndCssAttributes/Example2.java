@@ -5,13 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Example2 {
 	public static void main(String[] args) {
-		WebDriver driver = new EdgeDriver();
+		WebDriver driver = new ChromeDriver();
 		// to open browser on full screen
 		driver.manage().window().maximize();
 		// to avoid NoSuchElementException defining implicit wait
@@ -35,6 +36,8 @@ public class Example2 {
 		System.out.println("Username X cord "+username_Cords_x);
 		System.out.println("Username Y cord "+username_Cords_y);
 		
+		Point p=new Point(300,300);
+		driver.manage().window().setPosition(p);		
 		System.out.println("Is error msg displayed above username i/p field "+(username_Cords_y > error_Msg_y));
 	}
 }

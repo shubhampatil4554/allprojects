@@ -1,6 +1,6 @@
 Feature: Validating order placement in tricentis application
 
-Scenario:
+Scenario: Login Tricentis Application
 Given user is on tricentis main page
 And click on login link
 And enter email and password

@@ -60,4 +60,10 @@ public class DemoBlaze01HomePage extends SeleniumUtility {
 	public void clickOnCartLink() {
 		clickOnElement(cartLink);
 	}
+	
+	@FindBy(css="logout2")
+	private WebElement logOutLink;
+	public void clickOnLogoutLink(){
+		clickOnElement(logOutLink);
+	}
 }

@@ -11,7 +11,6 @@ class BankAccount {
 	}
 
 	private static BankAccount obj = new BankAccount();
-
 	public static BankAccount getInstance() {
 		return obj;
 	}
