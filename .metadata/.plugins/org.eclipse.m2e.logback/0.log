@@ -1998,3 +1998,13 @@
 2026-06-08 11:34:28,332 [Worker-17: Launching Example2] WARN  o.apache.maven.project.MavenProject - Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
 2026-06-08 12:04:31,756 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@489fbfb5{STOPPING}[12.1.4,sto=0]
 2026-06-08 12:04:31,760 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped oejs.ServerConnector@6935b32b{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2026-06-10 23:11:57,669 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-06-17 11:18:23,341 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-06-17 11:18:25,997 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2026-06-17 11:21:41,563 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.1.4; built: 2025-11-10T17:42:37.481Z; git: 4137e00793d583cfc4ce76bf607e482178a85597; jvm 21.0.9+10-LTS
+2026-06-17 11:21:41,736 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@731d9a40{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@1097808e{STARTED}}
+2026-06-17 11:21:41,737 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2026-06-17 11:21:41,769 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started oejs.ServerConnector@1e0af7a3{HTTP/1.1, (http/1.1)}{127.0.0.1:49962}
+2026-06-17 11:21:41,772 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@71480f63{STARTING}[12.1.4,sto=0] @216ms
+2026-06-17 14:14:56,926 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@71480f63{STOPPING}[12.1.4,sto=0]
+2026-06-17 14:14:56,932 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped oejs.ServerConnector@1e0af7a3{HTTP/1.1, (http/1.1)}{127.0.0.1:0}

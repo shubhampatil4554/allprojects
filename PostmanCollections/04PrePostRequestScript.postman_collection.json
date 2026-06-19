@@ -1,0 +1,108 @@
+{
+  "info": {
+    "_postman_id": "4345fc0a-dd9a-4f31-acad-4d74e04eb624",
+    "name": "04PrePostRequestScript",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39611489",
+    "_collection_link": "https://go.postman.co/collection/39611489-4345fc0a-dd9a-4f31-acad-4d74e04eb624?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "MyFolder",
+      "item": [
+        {
+          "name": "FolderRequest",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "console.log(\"Pre-requisite script at Request level\")"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "console.log(\"Test script at Request level\")"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/students/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "students",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              "console.log(\"Pre-requisite script at Folder level\");"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              "console.log(\"Test script at Folder level\")"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "console.log(\"Pre-requisite script at collection level\")"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "console.log(\"Test script at collection level\")"
+        ]
+      }
+    }
+  ]
+}

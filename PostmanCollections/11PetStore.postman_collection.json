@@ -1,0 +1,57 @@
+{
+  "info": {
+    "_postman_id": "a2f1a5c3-9531-48bf-a267-2df581b7b943",
+    "name": "11PetStore",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39611489",
+    "_collection_link": "https://go.postman.co/collection/39611489-a2f1a5c3-9531-48bf-a267-2df581b7b943?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "create request",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "const randomnum=Math.floor(random()*100+1)\r",
+              "var randomStr='john'+Math.random().toString(36).substring(2);\r",
+              "\r",
+              "pm.environment.set(\"id\",randomnum);\r",
+              "pm.collectionVariables.set(\"username\",randomStr);\r",
+              "\r",
+              "//var jsonData=xml2Json(responseBody);\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":{{id}},\r\n    \"username\":{{username}}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "httpss://petstore.swagger.io",
+          "protocol": "httpss",
+          "host": [
+            "petstore",
+            "swagger",
+            "io"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

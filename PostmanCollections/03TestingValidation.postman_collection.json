@@ -1,0 +1,439 @@
+{
+  "info": {
+    "_postman_id": "64a641c8-3c93-467f-ab6d-3204d782b781",
+    "name": "03TestingValidation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39611489",
+    "_collection_link": "https://go.postman.co/collection/39611489-64a641c8-3c93-467f-ab6d-3204d782b781?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "TestStatusCodeHeader",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "//Test for the response status code\r",
+              "pm.test(\"Status code is 200\", ()=>{\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "//-----------------------------------------\r",
+              "//Test Headers\r",
+              "//-----------------------------------------\r",
+              "//check that header response is present or not\r",
+              "pm.test(\"Content type header is present or not\",()=>{\r",
+              "    pm.response.to.have.header(\"Content-Type\");\r",
+              "});\r",
+              "//Test for a response header having a particular value\r",
+              "pm.test(\"Content-Type header is application/json\",()=>{\r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TestStatusCodeHeader Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "//Test for the response status code\r",
+              "pm.test(\"Status code is 200\", ()=>{\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "//-----------------------------------------\r",
+              "//Test Headers\r",
+              "//-----------------------------------------\r",
+              "//check that header response is present or not\r",
+              "pm.test(\"Content type header is present or not\",()=>{\r",
+              "    pm.response.to.have.header(\"Content-Type\");\r",
+              "});\r",
+              "//Test for a response header having a particular value\r",
+              "pm.test(\"Content-Type header is application/json\",()=>{\r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TestIncludeStatusCodeAndCookies",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "//if you want to test for the status code being one of a set,include them all in an array and use oneOf\r",
+              "pm.test(\"Successful post request\", ()=>{\r",
+              "    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+              "});\r",
+              "//check the status code text\r",
+              "pm.test(\"Status code name has string\", ()=>{\r",
+              "    pm.response.to.have.status(\"Created\");\r",
+              "});\r",
+              "//--------------------------------------------\r",
+              "//Testing Cookies\r",
+              "//--------------------------------------------\r",
+              "//Test if a cookie is present in the response\r",
+              "pm.test(\"Cookie 'language' is present or not\",()=>{\r",
+              "    pm.expect(pm.cookies.has('language')).to.be.true;\r",
+              "})\r",
+              "//Test for particular cookie value\r",
+              "pm.test(\"Cookie language has value 1\",()=>{\r",
+              "    pm.expect(pm.cookies.get('language')).to.eql(\"en-gb\");\r",
+              "})"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"name\":\"Sam\",\r\n     \"location\":\"Maldives\",\r\n     \"phone\":\"1234560789\",\r\n     \"courses\":[\r\n                 \"pyspark\",\r\n                 \"mongodb\"\r\n               ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TestResponseTime",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "//Test Rsponse Time\r",
+              "//Test for the response time to be within a specifed range\r",
+              "pm.test(\"Response time is less than 200ms\",()=>{\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"name\":\"Soe\",\r\n     \"location\":\"Bhuj\",\r\n     \"phone\":\"1234567089\",\r\n     \"courses\":[\r\n                 \"python\",\r\n                 \"nodejs\"\r\n               ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students/s6Og1z0AMlc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "s6Og1z0AMlc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELRequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students/s6Og1z0AMlc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "s6Og1z0AMlc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TestValueTypeAndArrayProperties",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "//Asserting a value Type\r",
+              "//Test the type of any part of the response\r",
+              "const jsonData= pm.response.json();\r",
+              "pm.test(\"Test Data Type Of Response\",()=>{\r",
+              "pm.expect(jsonData).to.be.an(\"object\");\r",
+              "pm.expect(jsonData.name).to.be.a(\"string\");\r",
+              "pm.expect(jsonData.phone).to.be.a(\"string\");\r",
+              "pm.expect(jsonData.courses).to.be.an(\"array\");\r",
+              "});\r",
+              "\r",
+              "//Asserting Array Properties\r",
+              "//Check if an array is empty and if it contains particular items\r",
+              "pm.test(\"Test Array Properties\",()=>{\r",
+              "//Courses include java\r",
+              "pm.expect(jsonData.courses).to.include(\"java\");\r",
+              "//courses array must include all listed\r",
+              "pm.expect(jsonData.courses).to.have.members([\"java\",\"MySQL\"]);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/students/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ValidatingJSONFieldsResponse",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "//Validating JSON Fields in response\r",
+              "pm.test(\"Validating json values \",()=>{\r",
+              "    const jsonData= pm.response.json();\r",
+              "    pm.expect(jsonData.name).to.eql(\"Shubham\");\r",
+              "    pm.expect(jsonData.id).to.eql(\"1\");\r",
+              "    pm.expect(jsonData.phone).to.eql(\"1234567890\");\r",
+              "    pm.expect(jsonData.courses[0]).to.eql(\"java\");\r",
+              "    pm.expect(jsonData.courses[1]).to.eql(\"MySQL\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JSONSchemaValidator",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var schema =  \r",
+              "{\r",
+              "  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+              "  \"type\": \"object\",\r",
+              "  \"properties\": {\r",
+              "    \"id\": {\r",
+              "      \"type\": \"string\"\r",
+              "    },\r",
+              "    \"name\": {\r",
+              "      \"type\": \"string\"\r",
+              "    },\r",
+              "    \"location\": {\r",
+              "      \"type\": \"string\"\r",
+              "    },\r",
+              "    \"phone\": {\r",
+              "      \"type\": \"string\"\r",
+              "    },\r",
+              "    \"courses\": {\r",
+              "      \"type\": \"array\",\r",
+              "      \"items\": [\r",
+              "        {\r",
+              "          \"type\": \"string\"\r",
+              "        },\r",
+              "        {\r",
+              "          \"type\": \"string\"\r",
+              "        }\r",
+              "      ]\r",
+              "    }\r",
+              "  },\r",
+              "  \"required\": [\r",
+              "    \"id\",\r",
+              "    \"name\",\r",
+              "    \"location\",\r",
+              "    \"phone\",\r",
+              "    \"courses\"\r",
+              "  ]\r",
+              "}\r",
+              "const jsonData= pm.response.json();\r",
+              "pm.test(\"Test Data Type Of Response\",()=>{\r",
+              "pm.expect(jsonData).to.be.an(\"object\");\r",
+              "pm.expect(jsonData.name).to.be.a(\"string\");\r",
+              "pm.expect(jsonData.phone).to.be.a(\"string\");\r",
+              "pm.expect(jsonData.courses).to.be.an(\"array\");\r",
+              "});\r",
+              "pm.test(\"Validate schema\",()=>{\r",
+              "    pm.expect(tv4.validate(jsonData, schema)).to.be.true;\r",
+              "})"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
