@@ -1,0 +1,142 @@
+{
+  "info": {
+    "_postman_id": "3285cb39-f2a4-42ab-9de6-0ccd73d501ac",
+    "name": "01Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39611489",
+    "_collection_link": "https://go.postman.co/collection/39611489-3285cb39-f2a4-42ab-9de6-0ccd73d501ac?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GETRequest",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://github-api.mock.beeceptor.com/app/hook/deliveries/12345678",
+          "protocol": "https",
+          "host": [
+            "github-api",
+            "mock",
+            "beeceptor",
+            "com"
+          ],
+          "path": [
+            "app",
+            "hook",
+            "deliveries",
+            "12345678"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POSTRequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"test\",\r\n    \"salary\":\"123\",\r\n    \"age\":\"23\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dummy.restapiexample.com/api/v1/create",
+          "protocol": "https",
+          "host": [
+            "dummy",
+            "restapiexample",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUTRequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"test\",\r\n    \"salary\":\"123\",\r\n    \"age\":\"23\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dummy.restapiexample.com/api/v1/update/21",
+          "protocol": "https",
+          "host": [
+            "dummy",
+            "restapiexample",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "update",
+            "21"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELRequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://dummy.restapiexample.com/api/v1/delete/2",
+          "protocol": "https",
+          "host": [
+            "dummy",
+            "restapiexample",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "delete",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

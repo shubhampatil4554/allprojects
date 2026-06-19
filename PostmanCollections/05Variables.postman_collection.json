@@ -1,0 +1,197 @@
+{
+  "info": {
+    "_postman_id": "4412ea26-b141-4659-997e-4e293bf0726a",
+    "name": "05Variables",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39611489",
+    "_collection_link": "https://go.postman.co/collection/39611489-4412ea26-b141-4659-997e-4e293bf0726a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "PostRequest",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n           \"name\":\"Sam\",\r\n           \"location\":\"Maldives\",\r\n           \"phone\":\"1234560789\",\r\n           \"courses\":[\r\n                       \"pyspark\",\r\n                       \"mongodb\"\r\n                     ]\r\n         }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url_global}}students",
+          "host": [
+            "{{url_global}}students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetRequest",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "\r",
+              "console.log(pm.globals.get(\"userid_global\"));\r",
+              "console.log(pm.environment.get(\"userid_env\")); \r",
+              "console.log(pm.collectionVariables.get(\"userid_collect\"));\r",
+              "\r",
+              "\r",
+              "//unset global variable through post-req script\r",
+              "pm.globals.unset(\"userid_global\");\r",
+              "\r",
+              "//unset environment variable through post-req script\r",
+              "pm.environment.unset(\"userid_env\"); \r",
+              "\r",
+              "//unset collection variable through post-req script\r",
+              "pm.collectionVariables.unset(\"userid_collect\");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "//create global variable through pre-req script\r",
+              "pm.globals.set(\"userid_global\",\"2\");\r",
+              "\r",
+              "//create environment variable through pre-req script\r",
+              "pm.environment.set(\"userid_env\",\"3\"); \r",
+              "\r",
+              "//create collection variable through pre-req script\r",
+              "pm.collectionVariables.set(\"userid_collect\",\"3\");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url_qa_environment}}students/{{userid_global}}",
+          "host": [
+            "{{url_qa_environment}}students"
+          ],
+          "path": [
+            "{{userid_global}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PutRequest",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n           \"name\":\"Scott\",\r\n           \"location\":\"Bhuj\",\r\n           \"phone\":\"1234506789\",\r\n           \"courses\":[\r\n                       \"powerBi\",\r\n                       \"ruby\"\r\n                     ]\r\n         }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url_collect}}students/uoPDkRSdAw8",
+          "host": [
+            "{{url_collect}}students"
+          ],
+          "path": [
+            "uoPDkRSdAw8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DelRequest",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "//local Variable Create\r",
+              "pm.variables.set(\"url_local\",\"http://localhost:3000/\")"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{url_local}}students/uoPDkRSdAw8",
+          "host": [
+            "{{url_local}}students"
+          ],
+          "path": [
+            "uoPDkRSdAw8"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "value": ""
+    },
+    {
+      "key": "url_collect",
+      "value": ""
+    }
+  ]
+}
